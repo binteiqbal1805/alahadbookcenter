@@ -716,7 +716,7 @@
   </div>
 
   <!-- Admin Login Modal -->
-  <div id="adminAuthModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md">
+  <div id="adminAuthModal" style="display: none;" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md">
     <div class="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl p-6 border border-slate-100 relative">
       <button onclick="closeAdminAuthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
         <span class="material-symbols-outlined text-xl">close</span>
@@ -744,7 +744,7 @@
   </div>
 
   <!-- Admin Dashboard Modal -->
-  <div id="adminDashboardModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 bg-slate-900/80 backdrop-blur-md overflow-hidden">
+  <div id="adminDashboardModal" style="display: none;" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-slate-900/80 backdrop-blur-md overflow-hidden">
     <div class="bg-white rounded-3xl max-w-6xl w-full h-[90vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden">
 
       <!-- Admin Header -->
@@ -1205,7 +1205,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="src/pdfGenerator.js"></script>
-  <script src="src/app.js"></script>
+  <script type="module" src="/src/pdfGenerator.js"></script>
+  <script type="module" src="/src/app.js"></script>
 </body>
 </html>

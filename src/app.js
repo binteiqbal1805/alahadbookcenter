@@ -181,6 +181,10 @@ function loadStoredBooks() {
   return DEFAULT_BOOKS.map(book => ({ ...book }));
 }
 
+function loadStoredOrders() {
+  return [];
+}
+
 function saveStoredBooks() {
   const countEl = document.getElementById('countAll');
   if (countEl) countEl.innerText = window.booksData.length;
@@ -208,44 +212,69 @@ function requireAdmin() {
 
 // Supabase sync
 async function syncFromSupabase() {
+  let booksDataRows = null;
   const client = initSupabase();
-  if (!client) return;
-  try {
-    const { data, error } = await client.from('books').select('*').order('id', { ascending: true });
-    if (!error && Array.isArray(data)) {
-      window.booksData = data.map(b => {
-        const img = getSafeImageUrl(b.cover_image || b.image);
-
-
-        return {
-          id: b.id,
-          title: b.title || '',
-          urduTitle: b.urdu_title || b.urduTitle || '',
-          price: Number(b.physical_price ?? b.price ?? 0),
-          ebookPrice: b.ebook_price != null ? Number(b.ebook_price) : (b.ebookPrice != null ? Number(b.ebookPrice) : undefined),
-          publisher: b.publisher || 'Usmaniya Publications',
-          author: b.author || 'Medical Clinical Panel',
-          category: b.category || 'General',
-          languages: Array.isArray(b.languages) ? b.languages : ['English', 'Urdu'],
-          image: img,
-          badge: b.badge || 'Available',
-          badgeColor: b.badge_color || b.badgeColor || 'bg-skybrand-600',
-          description: b.description || '',
-          urduDescription: b.urdu_description || b.urduDescription || '',
-          topics: Array.isArray(b.topics) ? b.topics : [],
-          inStock: b.in_stock !== false && b.inStock !== false,
-          sampleImages: Array.isArray(b.sample_images) && b.sample_images.length > 0 
-            ? b.sample_images 
-            : (Array.isArray(b.sampleImages) && b.sampleImages.length > 0 ? b.sampleImages : ['images/injection_sample_1.svg'])
-        };
-      });
-      renderBooks();
-      renderAdminCatalog();
-      const countEl = document.getElementById('countAll');
-      if (countEl) countEl.innerText = window.booksData.length;
+  if (client) {
+    try {
+      const { data, error } = await client.from('books').select('*').order('id', { ascending: true });
+      if (!error && Array.isArray(data) && data.length > 0) {
+        booksDataRows = data;
+      }
+    } catch (e) {
+      console.warn('Supabase client books fetch notice:', e);
     }
-  } catch (e) {
-    console.warn('Supabase books fetch notice:', e);
+  }
+
+  // Fallback to direct REST API query if client library is unavailable or failed
+  if (!booksDataRows) {
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/books?select=*&order=id.asc`, {
+        headers: {
+          'apikey': SUPABASE_PUBLISHABLE_KEY,
+          'Authorization': `Bearer ${SUPABASE_PUBLISHABLE_KEY}`
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          booksDataRows = data;
+        }
+      }
+    } catch (fetchErr) {
+      console.warn('Supabase REST fallback notice:', fetchErr);
+    }
+  }
+
+  if (Array.isArray(booksDataRows) && booksDataRows.length > 0) {
+    window.booksData = booksDataRows.map(b => {
+      const img = getSafeImageUrl(b.cover_image || b.image);
+
+      return {
+        id: b.id,
+        title: b.title || '',
+        urduTitle: b.urdu_title || b.urduTitle || '',
+        price: Number(b.physical_price ?? b.price ?? 0),
+        ebookPrice: b.ebook_price != null ? Number(b.ebook_price) : (b.ebookPrice != null ? Number(b.ebookPrice) : undefined),
+        publisher: b.publisher || 'Usmaniya Publications',
+        author: b.author || 'Medical Clinical Panel',
+        category: b.category || 'General',
+        languages: Array.isArray(b.languages) ? b.languages : ['English', 'Urdu'],
+        image: img,
+        badge: b.badge || 'Available',
+        badgeColor: b.badge_color || b.badgeColor || 'bg-skybrand-600',
+        description: b.description || '',
+        urduDescription: b.urdu_description || b.urduDescription || '',
+        topics: Array.isArray(b.topics) ? b.topics : [],
+        inStock: b.in_stock !== false && b.inStock !== false,
+        sampleImages: Array.isArray(b.sample_images) && b.sample_images.length > 0 
+          ? b.sample_images 
+          : (Array.isArray(b.sampleImages) && b.sampleImages.length > 0 ? b.sampleImages : ['images/injection_sample_1.svg'])
+      };
+    });
+    renderBooks();
+    renderAdminCatalog();
+    const countEl = document.getElementById('countAll');
+    if (countEl) countEl.innerText = window.booksData.length;
   }
 }
 
@@ -411,8 +440,8 @@ async function testSupabaseConnectionUI() {
   }
 }
 
-// DOM Ready
-document.addEventListener('DOMContentLoaded', () => {
+// App Initialization
+function initializeApp() {
   window.booksData = loadStoredBooks();
   window.ordersData = loadStoredOrders();
   
@@ -440,7 +469,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   syncFromSupabase();
   checkSupabaseConnection();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+  initializeApp();
+}
 
 // Render Books Grid
 function renderBooks() {
@@ -767,12 +802,18 @@ function openPreviewModal(bookId) {
   `;
 
   const modal = document.getElementById('previewModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closePreviewModal() {
   const modal = document.getElementById('previewModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 // Checkout Flow
@@ -783,12 +824,18 @@ function openCheckoutModal() {
   }
   toggleCartDrawer(false);
   const modal = document.getElementById('checkoutModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closeCheckoutModal() {
   const modal = document.getElementById('checkoutModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 function showPaymentDetails(val) {
@@ -938,7 +985,10 @@ function openSamplePdfModal(bookId) {
     if (fallback) fallback.classList.remove('hidden');
   }
 
-  modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function renderSampleGallerySlide() {
@@ -989,7 +1039,10 @@ function setSampleGalleryIndex(idx) {
 
 function closeSamplePdfModal() {
   const modal = document.getElementById('samplePdfModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 function buyEbook(bookId) {
@@ -1006,17 +1059,28 @@ function openAdminPortal() {
   const modal = document.getElementById('adminAuthModal');
   const dash = document.getElementById('adminDashboardModal');
   if (window.isAdminLoggedIn) {
-    if (dash) dash.classList.remove('hidden');
+    if (dash) {
+      dash.classList.remove('hidden');
+      dash.style.display = 'flex';
+    }
     renderAdminCatalog();
     renderAdminOrders();
   } else {
-    if (modal) modal.classList.remove('hidden');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.style.display = 'flex';
+      const emailInput = document.getElementById('adminEmailInput');
+      if (emailInput) setTimeout(() => emailInput.focus(), 100);
+    }
   }
 }
 
 function closeAdminAuthModal() {
   const modal = document.getElementById('adminAuthModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 async function verifyAdminPin(e) {
@@ -1063,7 +1127,10 @@ async function verifyAdminPin(e) {
         window.isAdminLoggedIn = true;
         closeAdminAuthModal();
         const dash = document.getElementById('adminDashboardModal');
-        if (dash) dash.classList.remove('hidden');
+        if (dash) {
+          dash.classList.remove('hidden');
+          dash.style.display = 'flex';
+        }
         renderAdminCatalog();
         renderAdminOrders();
         await syncOrdersFromSupabase();
@@ -1150,7 +1217,10 @@ async function logoutAdmin() {
   }
   window.isAdminLoggedIn = false;
   const dash = document.getElementById('adminDashboardModal');
-  if (dash) dash.classList.add('hidden');
+  if (dash) {
+    dash.classList.add('hidden');
+    dash.style.display = 'none';
+  }
 }
 
 function switchAdminTab(tab) {
@@ -1381,7 +1451,10 @@ function openEditBookModal(bookId) {
   if (imgPreview) imgPreview.src = book.image || 'images/injection_therapy_book.svg';
 
   const modal = document.getElementById('editBookModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closeEditBookModal() {
@@ -1389,7 +1462,10 @@ function closeEditBookModal() {
   const fileInput = document.getElementById('editImageFileInput');
   if (fileInput) fileInput.value = '';
   const modal = document.getElementById('editBookModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 function handleEditImageFileInput(event) {
@@ -1547,13 +1623,19 @@ function openDeleteBookModal(bookId) {
     promptEl.textContent = `Are you sure you want to remove "${book.title}" (${book.urduTitle || ''}) from your store catalog?`;
   }
   const modal = document.getElementById('deleteBookConfirmModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closeDeleteBookModal() {
   pendingDeleteBookId = null;
   const modal = document.getElementById('deleteBookConfirmModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 async function executeDeleteBook() {
@@ -1584,12 +1666,18 @@ function deleteBook(bookId) {
 // Clear Orders Log Operations
 function openClearLogsModal() {
   const modal = document.getElementById('clearLogsConfirmModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closeClearLogsModal() {
   const modal = document.getElementById('clearLogsConfirmModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 function executeClearOrderLogs() {
@@ -1695,7 +1783,10 @@ function renderAdminOrders() {
 // Modal management for Add Book
 function openAddBookModal() {
   const modal = document.getElementById('addBookModal');
-  if (modal) modal.classList.remove('hidden');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
 }
 
 function closeAddBookModal() {
@@ -1703,7 +1794,10 @@ function closeAddBookModal() {
   const fileInput = document.getElementById('newImageFileInput');
   if (fileInput) fileInput.value = '';
   const modal = document.getElementById('addBookModal');
-  if (modal) modal.classList.add('hidden');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
 }
 
 async function handleAddNewBook(e) {

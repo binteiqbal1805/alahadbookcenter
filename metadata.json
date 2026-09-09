@@ -1,0 +1,8 @@
+{
+  "name": "AL-AHAD BOOK CENTER",
+  "description": "Official sellers of Usmaniya Publications - Supplier of medical and healthcare books across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
