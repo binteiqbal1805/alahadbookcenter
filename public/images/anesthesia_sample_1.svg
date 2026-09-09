@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 950" width="700" height="950">
+  <rect width="700" height="950" fill="#ffffff"/>
+  <rect x="25" y="25" width="650" height="900" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="25" y="25" width="650" height="60" rx="8" fill="#581c87"/>
+  <text x="50" y="62" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffffff">
+    FOUNDATIONS &amp; PRACTICES OF ANESTHESIA
+  </text>
+  <text x="645" y="62" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#e9d5ff" text-anchor="end">
+    SAMPLE SPECIMEN
+  </text>
+  
+  <text x="640" y="125" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="18" font-weight="700" fill="#581c87" text-anchor="end" direction="rtl">
+    ایئر وے مینجمنٹ اور انٹیوبیشن کے بنیادی کلینکل اصول
+  </text>
+  
+  <!-- Content -->
+  <rect x="50" y="150" width="600" height="230" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="70" y="180" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#6b21a8">
+    Mallampati Airway Classification &amp; Pre-op Assessment:
+  </text>
+  <text x="70" y="210" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Class I: Soft palate, fauces, uvula, pillars visible (Low intubation difficulty).
+  </text>
+  <text x="70" y="238" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Class II: Soft palate, fauces, portion of uvula visible.
+  </text>
+  <text x="70" y="266" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Class III: Soft palate, base of uvula visible (Anticipate difficult airway protocol).
+  </text>
+  <text x="70" y="294" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Class IV: Hard palate only visible (Video laryngoscopy &amp; fiberoptic setup prepared).
+  </text>
+
+  <!-- Urdu Content -->
+  <rect x="50" y="400" width="600" height="190" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="70" y="430" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#0f172a">
+    Cardiology Considerations in Non-Cardiac Surgery:
+  </text>
+  <text x="630" y="470" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#334155" text-anchor="end" direction="rtl">
+    دل کے مریضوں کے آپریشن سے پہلے خصوصی خطرات کا تخمینہ اور مانیٹرنگ کے لیے ڈاکٹر طلحہ خالد کی ہدایات
+  </text>
+  <text x="70" y="520" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    Authored by Dr. Talha Khalid (Consultant Interventional Cardiologist).
+  </text>
+
+  <!-- Specimen Footer -->
+  <rect x="50" y="610" width="600" height="130" rx="8" fill="#2e1065"/>
+  <text x="350" y="650" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#fde047" text-anchor="middle">
+    AL-AHAD BOOK CENTER — OFFICIAL USMANIYA SAMPLE
+  </text>
+  <text x="350" y="680" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Order Complete Book with Free Nationwide Delivery: Abdul Ahad 0328-1830420
+  </text>
+</svg>

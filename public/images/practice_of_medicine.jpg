@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="850" rx="12" fill="url(#medBg)"/>
+  <rect x="0" y="0" width="42" height="850" fill="#082f49" opacity="0.45"/>
+  <line x1="42" y1="0" x2="42" y2="850" stroke="#7dd3fc" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Publisher Ribbon -->
+  <rect x="70" y="45" width="460" height="42" rx="8" fill="#ffffff" fill-opacity="0.12" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="300" y="72" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#bae6fd" text-anchor="middle" letter-spacing="1">
+    USMANIYA PUBLICATIONS • عثمان پبلیکیشنز
+  </text>
+
+  <!-- Title -->
+  <text x="300" y="150" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle">
+    PRACTICE OF MEDICINE
+  </text>
+  <text x="300" y="188" font-family="'Outfit', sans-serif" font-size="16" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="2">
+    CLINICAL DIAGNOSIS &amp; PRESCRIPTION PROTOCOLS
+  </text>
+
+  <!-- Urdu Title Box -->
+  <rect x="65" y="215" width="470" height="75" rx="12" fill="#082f49" stroke="#38bdf8" stroke-width="2"/>
+  <text x="300" y="262" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="22" font-weight="700" fill="#fde047" text-anchor="middle" direction="rtl">
+    پریکٹس آف میڈیسن — مکمل کلینکل رہنما
+  </text>
+
+  <!-- Stethoscope & Heartbeat Icon Graphic -->
+  <g transform="translate(300, 410)">
+    <circle cx="0" cy="0" r="90" fill="#ffffff" fill-opacity="0.1" stroke="#38bdf8" stroke-width="3"/>
+    <circle cx="0" cy="0" r="75" fill="#075985"/>
+    <!-- Heartbeat Line -->
+    <path d="M -60 0 L -30 0 L -15 -35 L 0 40 L 15 -20 L 30 10 L 45 0 L 60 0" fill="none" stroke="#f43f5e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="60" cy="0" r="5" fill="#fde047"/>
+    <!-- Medical Cross -->
+    <rect x="-7" y="-70" width="14" height="36" rx="3" fill="#38bdf8"/>
+    <rect x="-18" y="-59" width="36" height="14" rx="3" fill="#38bdf8"/>
+  </g>
+
+  <!-- Topics Box -->
+  <rect x="70" y="530" width="460" height="190" rx="14" fill="#082f49" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="95" y="565" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#fde047" letter-spacing="1">
+    COMPLETE CLINICAL PRACTICE ESSENTIALS:
+  </text>
+  <text x="95" y="595" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ General Clinical Diagnosis &amp; Systemic Examination
+  </text>
+  <text x="95" y="623" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Standard Prescription Guidelines &amp; Dosage Charts
+  </text>
+  <text x="95" y="651" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Management of Chronic, Acute &amp; Emergency Illnesses
+  </text>
+  <text x="95" y="679" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Family Medicine &amp; Outpatient (OPD) Clinic Setup
+  </text>
+  <text x="95" y="705" font-family="'Outfit', sans-serif" font-size="12" font-weight="500" fill="#bae6fd">
+    Ideal for General Practitioners, RMOs, Clinic Physicians
+  </text>
+
+  <!-- Bottom Bar -->
+  <rect x="70" y="745" width="460" height="55" rx="10" fill="url(#goldRibbon)"/>
+  <text x="300" y="780" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#0f172a" text-anchor="middle">
+    AL-AHAD BOOK CENTER • OFFICIAL SELLER
+  </text>
+</svg>

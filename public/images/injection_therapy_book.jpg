@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="injBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="4" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Book Cover Base -->
+  <rect width="600" height="850" rx="12" fill="url(#injBg)"/>
+  <rect x="0" y="0" width="42" height="850" fill="#022c22" opacity="0.4"/>
+  <line x1="42" y1="0" x2="42" y2="850" stroke="#a7f3d0" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Top Publisher Ribbon -->
+  <rect x="70" y="45" width="460" height="42" rx="8" fill="#ffffff" fill-opacity="0.12" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="300" y="72" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#a7f3d0" text-anchor="middle" letter-spacing="1">
+    USMANIYA PUBLICATIONS • عثمان پبلیکیشنز
+  </text>
+
+  <!-- Main English Title -->
+  <text x="300" y="155" font-family="'Source Serif 4', serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">
+    INJECTION THERAPY
+  </text>
+  <text x="300" y="195" font-family="'Outfit', sans-serif" font-size="20" font-weight="700" fill="#6ee7b7" text-anchor="middle" letter-spacing="2">
+    &amp; CLINICAL PROCEDURES
+  </text>
+
+  <!-- Urdu Title Box -->
+  <rect x="65" y="225" width="470" height="75" rx="12" fill="#022c22" stroke="#34d399" stroke-width="2"/>
+  <text x="300" y="272" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="20" font-weight="700" fill="#fde047" text-anchor="middle" direction="rtl">
+    کلینیکل انجکشن گائیڈ معہ انجکشن تھراپی اینڈ سیفٹی گائیڈ
+  </text>
+
+  <!-- Medical Syringe & Infusion Icon Illustration -->
+  <g transform="translate(300, 420)">
+    <circle cx="0" cy="0" r="90" fill="#ffffff" fill-opacity="0.1" stroke="#34d399" stroke-width="3"/>
+    <circle cx="0" cy="0" r="75" fill="#047857" filter="url(#bookShadow)"/>
+    <!-- Syringe Vector -->
+    <path d="M -30 30 L 20 -20 L 35 -5 L 30 10 L -15 55 Z" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+    <line x1="20" y1="-20" x2="45" y2="-45" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <line x1="45" y1="-45" x2="55" y2="-55" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="-25" cy="50" r="5" fill="#fde047"/>
+    <!-- Medical Plus Cross -->
+    <rect x="-8" y="-70" width="16" height="40" rx="3" fill="#34d399"/>
+    <rect x="-20" y="-58" width="40" height="16" rx="3" fill="#34d399"/>
+  </g>
+
+  <!-- Key Procedures List Box -->
+  <rect x="70" y="540" width="460" height="180" rx="14" fill="#065f46" stroke="#10b981" stroke-width="1.5"/>
+  <text x="95" y="575" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#fde047" letter-spacing="1">
+    KEY CLINICAL TOPICS INCLUDED:
+  </text>
+  <text x="95" y="605" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ بازوؤں میں کیسے انجکشن لگائیں (Arm Injections)
+  </text>
+  <text x="95" y="633" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ رگوں میں کیسے انجکشن لگائیں (IV Protocols)
+  </text>
+  <text x="95" y="661" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ بچوں کو کیسے انجکشن لگائیں (Pediatric Injections)
+  </text>
+  <text x="95" y="689" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ ہپ اور ٹانگ میں انجکشن (IM Hip &amp; Leg) معہ سیفٹی طریقہ
+  </text>
+
+  <!-- Bottom Badge -->
+  <rect x="70" y="745" width="460" height="55" rx="10" fill="url(#goldRibbon)"/>
+  <text x="300" y="780" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#0f172a" text-anchor="middle">
+    AL-AHAD BOOK CENTER • FREE DELIVERY PAKISTAN
+  </text>
+</svg>

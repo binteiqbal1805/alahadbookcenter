@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="anesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b0764"/>
+      <stop offset="50%" stop-color="#6b21a8"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="850" rx="12" fill="url(#anesBg)"/>
+  <rect x="0" y="0" width="42" height="850" fill="#2e1065" opacity="0.5"/>
+  <line x1="42" y1="0" x2="42" y2="850" stroke="#d8b4fe" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Publisher Ribbon -->
+  <rect x="70" y="45" width="460" height="42" rx="8" fill="#ffffff" fill-opacity="0.12" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="72" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#f3e8ff" text-anchor="middle" letter-spacing="1">
+    USMANIYA PUBLICATIONS • عثمان پبلیکیشنز
+  </text>
+
+  <!-- Title -->
+  <text x="300" y="145" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">
+    FOUNDATIONS &amp; PRACTICES
+  </text>
+  <text x="300" y="180" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="900" fill="#fde047" text-anchor="middle">
+    OF ANESTHESIA
+  </text>
+  <text x="300" y="210" font-family="'Outfit', sans-serif" font-size="15" font-weight="700" fill="#d8b4fe" text-anchor="middle" letter-spacing="1">
+    A COMPREHENSIVE LEARNING RESOURCE
+  </text>
+
+  <!-- Author Badge -->
+  <rect x="100" y="230" width="400" height="34" rx="17" fill="#ffffff" fill-opacity="0.15" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="300" y="252" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+    By Dr. Talha Khalid (Interventional Cardiologist)
+  </text>
+
+  <!-- Urdu Title Box -->
+  <rect x="65" y="280" width="470" height="70" rx="12" fill="#2e1065" stroke="#c084fc" stroke-width="2"/>
+  <text x="300" y="324" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="20" font-weight="700" fill="#fde047" text-anchor="middle" direction="rtl">
+    فاؤنڈیشنز اینڈ پریکٹسز آف اینستھیزیا (اردو و انگلش)
+  </text>
+
+  <!-- Anesthesia Machine & Patient Monitoring Emblem -->
+  <g transform="translate(300, 440)">
+    <circle cx="0" cy="0" r="75" fill="#ffffff" fill-opacity="0.1" stroke="#c084fc" stroke-width="3"/>
+    <circle cx="0" cy="0" r="62" fill="#581c87"/>
+    <!-- Oxygen Mask / Respiratory Wave -->
+    <path d="M -40 10 C -20 -30 20 -30 40 10 C 20 25 -20 25 -40 10 Z" fill="none" stroke="#38bdf8" stroke-width="4"/>
+    <circle cx="0" cy="5" r="8" fill="#fde047"/>
+    <line x1="0" y1="-25" x2="0" y2="-45" stroke="#a855f7" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Topics Box -->
+  <rect x="70" y="540" width="460" height="180" rx="14" fill="#2e1065" stroke="#7e22ce" stroke-width="1.5"/>
+  <text x="95" y="575" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#fde047" letter-spacing="1">
+    ANESTHESIA &amp; ICU PROTOCOLS INCLUDED:
+  </text>
+  <text x="95" y="605" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Pre-operative Patient Evaluation &amp; Risk Stratification
+  </text>
+  <text x="95" y="633" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Airway Management &amp; Endotracheal Intubation
+  </text>
+  <text x="95" y="661" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ General, Spinal, Epidural &amp; Local Anesthesia Techniques
+  </text>
+  <text x="95" y="689" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff">
+    ✔ Intraoperative Hemodynamics &amp; PACU Recovery Care
+  </text>
+
+  <!-- Bottom Bar -->
+  <rect x="70" y="745" width="460" height="55" rx="10" fill="url(#goldRibbon)"/>
+  <text x="300" y="780" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#0f172a" text-anchor="middle">
+    AL-AHAD BOOK CENTER • FREE DELIVERY PAKISTAN
+  </text>
+</svg>

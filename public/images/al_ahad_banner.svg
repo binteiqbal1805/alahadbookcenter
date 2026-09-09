@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Frame -->
+  <rect width="800" height="1000" rx="32" fill="url(#bannerBg)"/>
+  
+  <!-- Subtle Medical Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1.5">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="800" height="1000" fill="url(#grid)" rx="32"/>
+  </g>
+  
+  <!-- Decorative Medical Emblem Ring -->
+  <circle cx="400" cy="200" r="100" fill="#ffffff" fill-opacity="0.1" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,6"/>
+  <circle cx="400" cy="200" r="82" fill="#ffffff" fill-opacity="0.15" filter="url(#shadow)"/>
+  
+  <!-- Caduceus / Medical Cross Emblem -->
+  <g fill="#ffffff">
+    <rect x="382" y="140" width="36" height="120" rx="6"/>
+    <rect x="340" y="182" width="120" height="36" rx="6"/>
+    <circle cx="400" cy="200" r="14" fill="#38bdf8"/>
+  </g>
+
+  <!-- Top Pill -->
+  <rect x="230" y="325" width="340" height="38" rx="19" fill="#ffffff" fill-opacity="0.15" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="400" y="350" font-family="'Outfit', 'Inter', sans-serif" font-size="14" font-weight="700" fill="#bae6fd" text-anchor="middle" letter-spacing="1">
+    ★ OFFICIAL USMANIYA PUBLICATIONS SELLER ★
+  </text>
+  
+  <!-- Main Title -->
+  <text x="400" y="425" font-family="'Source Serif 4', Georgia, serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+    AL-AHAD BOOK CENTER
+  </text>
+  
+  <!-- Urdu Subtitle -->
+  <text x="400" y="475" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="28" font-weight="700" fill="#fde047" text-anchor="middle" direction="rtl">
+    الأحد بک سنٹر — عثمان پبلیکیشنز
+  </text>
+  
+  <!-- Tagline -->
+  <text x="400" y="525" font-family="'Outfit', sans-serif" font-size="19" font-weight="600" fill="#e0f2fe" text-anchor="middle">
+    Supplier of Medical &amp; Health Care Books
+  </text>
+  
+  <!-- Feature Cards Group -->
+  <g filter="url(#shadow)">
+    <!-- Card 1 -->
+    <rect x="100" y="565" width="600" height="68" rx="16" fill="#075985" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="145" cy="599" r="18" fill="#10b981"/>
+    <path d="M 138 599 L 143 604 L 153 594" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="605" font-family="'Outfit', sans-serif" font-size="16" font-weight="700" fill="#ffffff">
+      FREE Delivery Charges All Over Pakistan
+    </text>
+
+    <!-- Card 2 -->
+    <rect x="100" y="650" width="600" height="68" rx="16" fill="#075985" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="145" cy="684" r="18" fill="#38bdf8"/>
+    <path d="M 138 684 L 143 689 L 153 679" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="690" font-family="'Outfit', sans-serif" font-size="16" font-weight="700" fill="#ffffff">
+      100% Authentic Usmaniya Medical Guides
+    </text>
+
+    <!-- Card 3: Contact Details -->
+    <rect x="100" y="735" width="600" height="95" rx="16" fill="#034e7b" stroke="#7dd3fc" stroke-width="2"/>
+    <circle cx="145" cy="782" r="22" fill="#f59e0b"/>
+    <text x="145" y="789" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">📞</text>
+    <text x="185" y="770" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#bae6fd">
+      CONTACT PERSON / WHATSAPP ORDER:
+    </text>
+    <text x="185" y="802" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#ffffff">
+      Abdul Ahad : 0328-1830420
+    </text>
+  </g>
+
+  <!-- Location Badge -->
+  <rect x="120" y="855" width="560" height="52" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="400" y="887" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#e0f2fe" text-anchor="middle">
+    📍 Bahawalpur Goheer town street 3-A, Punjab, Pakistan
+  </text>
+  
+  <text x="400" y="955" font-family="'Outfit', sans-serif" font-size="12" font-weight="500" fill="#7dd3fc" text-anchor="middle" opacity="0.8">
+    All Medical Textbooks, Clinical Guides &amp; Handbooks Available
+  </text>
+</svg>

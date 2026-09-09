@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 950" width="700" height="950">
+  <rect width="700" height="950" fill="#ffffff"/>
+  <rect x="25" y="25" width="650" height="900" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="25" y="25" width="650" height="60" rx="8" fill="#047857"/>
+  <text x="50" y="62" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffffff">
+    CHAPTER 3: INTRAMUSCULAR (IM) INJECTION PROTOCOL
+  </text>
+  <text x="645" y="62" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#a7f3d0" text-anchor="end">
+    SAMPLE SPECIMEN
+  </text>
+  
+  <!-- Urdu Chapter Heading -->
+  <text x="640" y="125" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="18" font-weight="700" fill="#065f46" text-anchor="end" direction="rtl">
+    ہپ اور ٹانگ میں انجکشن لگانے کے محفوظ اور معیاری طریقے
+  </text>
+  
+  <!-- Section 1 -->
+  <rect x="50" y="150" width="600" height="150" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="70" y="180" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#166534">
+    1. Anatomical Landmarks for Dorsogluteal Site (Hip):
+  </text>
+  <text x="70" y="210" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Divide the buttock quadrant into four equal parts: Upper Outer Quadrant (UOQ).
+  </text>
+  <text x="70" y="235" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Avoid sciatic nerve trajectory and superior gluteal artery.
+  </text>
+  <text x="70" y="260" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Needle insertion angle: Exact 90-degree perpendicular insertion with Z-track method.
+  </text>
+
+  <!-- Visual Diagram Box -->
+  <rect x="50" y="320" width="600" height="230" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="350" y="355" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">
+    CLINICAL NEEDLE ANGLES &amp; TISSUE LAYERS
+  </text>
+  <!-- Needle Angles Illustration -->
+  <g transform="translate(100, 390)">
+    <!-- 90 Deg IM -->
+    <line x1="60" y1="0" x2="60" y2="70" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="60,75 55,65 65,65" fill="#047857"/>
+    <text x="60" y="100" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">90° IM (Muscle)</text>
+    
+    <!-- 45 Deg Subcut -->
+    <line x1="200" y1="0" x2="245" y2="60" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+    <text x="230" y="100" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#0284c7" text-anchor="middle">45° Subcutaneous</text>
+
+    <!-- 25 Deg IV -->
+    <line x1="360" y1="20" x2="420" y2="60" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+    <text x="400" y="100" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#b45309" text-anchor="middle">25° Intravenous</text>
+  </g>
+
+  <!-- Urdu Instructions -->
+  <rect x="50" y="570" width="600" height="170" rx="8" fill="#fdf4ff" stroke="#f0abfc" stroke-width="1"/>
+  <text x="630" y="605" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="14" font-weight="700" fill="#701a75" text-anchor="end" direction="rtl">
+    اہم حفاظتی ہدایات برائے طبی عملہ:
+  </text>
+  <text x="630" y="640" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#4a044e" text-anchor="end" direction="rtl">
+    ١. انجکشن لگانے سے پہلے سرنج کو پیچھے کھینچ کر اسپیریشن (Aspiration) ضرور کریں۔
+  </text>
+  <text x="630" y="675" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#4a044e" text-anchor="end" direction="rtl">
+    ٢. اگر خون آ جائے تو فوری سرنج نکال کر نیا مقام اور نئی سرنج منتخب کریں۔
+  </text>
+  <text x="630" y="710" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#4a044e" text-anchor="end" direction="rtl">
+    ٣. بچوں کے لیے اینٹیرو لیٹرل تھائی (Vastus Lateralis) سب سے محفوظ جگہ ہے۔
+  </text>
+
+  <!-- Specimen Footer -->
+  <rect x="50" y="760" width="600" height="130" rx="8" fill="#022c22"/>
+  <text x="350" y="800" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#fde047" text-anchor="middle">
+    AL-AHAD BOOK CENTER — OFFICIAL USMANIYA SAMPLE
+  </text>
+  <text x="350" y="830" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Order Complete Book with Free Nationwide Delivery: Abdul Ahad 0328-1830420
+  </text>
+  <text x="350" y="860" font-family="'Outfit', sans-serif" font-size="11" fill="#a7f3d0" text-anchor="middle">
+    Page 42 of 280 • Usmaniya Publications
+  </text>
+</svg>

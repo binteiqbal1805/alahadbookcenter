@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 950" width="700" height="950">
+  <rect width="700" height="950" fill="#ffffff"/>
+  <rect x="25" y="25" width="650" height="900" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="25" y="25" width="650" height="60" rx="8" fill="#0369a1"/>
+  <text x="50" y="62" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffffff">
+    PRACTICE OF MEDICINE — CLINICAL PROTOCOLS
+  </text>
+  <text x="645" y="62" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#bae6fd" text-anchor="end">
+    SAMPLE SPECIMEN
+  </text>
+  
+  <text x="640" y="125" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="18" font-weight="700" fill="#0369a1" text-anchor="end" direction="rtl">
+    ہائیپر ٹینشن اور ذیابیطس کے کلینکل تشخیص و علاج کے رہنما اصول
+  </text>
+  
+  <!-- Diagnostic Chart -->
+  <rect x="50" y="150" width="600" height="230" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="70" y="180" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#0369a1">
+    Adult Hypertension Diagnostic &amp; Treatment Algorithm:
+  </text>
+  <text x="70" y="210" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Stage 1 HTN (130-139 / 80-89 mmHg): Lifestyle modifications + Monotherapy (ACEi/ARB).
+  </text>
+  <text x="70" y="238" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Stage 2 HTN (≥140 / ≥90 mmHg): Prompt 2-drug combination therapy (CCB + ARB).
+  </text>
+  <text x="70" y="266" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Hypertensive Urgency / Emergency: Immediate OPD stabilization &amp; ICU referral checklist.
+  </text>
+  <text x="70" y="294" font-family="'Outfit', sans-serif" font-size="12" fill="#334155">
+    • Patient Counseling: Low sodium intake (&lt;2g/day), regular BP monitoring logs.
+  </text>
+
+  <!-- Urdu Prescriptions -->
+  <rect x="50" y="400" width="600" height="210" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="70" y="430" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#0f172a">
+    Standard Prescription Guide &amp; Patient Communication:
+  </text>
+  <text x="630" y="470" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#334155" text-anchor="end" direction="rtl">
+    مریض کو خوراک اور پرہیز سمجھانے کا تفصیلی طریقہ کار تاکہ ادویات کا بہترین اثر ظاہر ہو۔
+  </text>
+  <text x="630" y="510" font-family="'Noto Nastaliq Urdu', Arial, sans-serif" font-size="13" fill="#334155" text-anchor="end" direction="rtl">
+    بلڈ پریشر اور شوگر کے باقاعدہ چارٹ بنانے کی ترغیب اور پیڈیاٹرک ایمرجنسی میں خوراک کا فارمولا
+  </text>
+  <text x="70" y="550" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" fill="#0369a1">
+    Formula: Clark's &amp; Young's Pediatric Dosage Calculation Rules included in Chapter 8.
+  </text>
+
+  <!-- Specimen Footer -->
+  <rect x="50" y="630" width="600" height="130" rx="8" fill="#0c4a6e"/>
+  <text x="350" y="670" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#fde047" text-anchor="middle">
+    AL-AHAD BOOK CENTER — OFFICIAL USMANIYA SAMPLE
+  </text>
+  <text x="350" y="700" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Order Complete Book with Free Nationwide Delivery: Abdul Ahad 0328-1830420
+  </text>
+  <text x="350" y="730" font-family="'Outfit', sans-serif" font-size="11" fill="#bae6fd" text-anchor="middle">
+    Usmaniya Publications Board • Practice of Medicine Reference Guide
+  </text>
+</svg>
